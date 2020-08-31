@@ -327,8 +327,8 @@ INSERT INTO nationality (nationality, country) VALUES
 ('Zambian', 'Zambia'),
 ('Zimbabwean', 'Zimbabwe');
 
-INSERT INTO traveller_type (traveller_type, description) VALUES
-('Groupie', "You love following a band/artist around while they're on tour.", "/assets/images/traveller_types/groupie.png"),
+INSERT INTO traveller_type (traveller_type, description, img_url) VALUES
+('Groupie', 'You love following a band/artist around while they''re on tour.', '/assets/images/traveller_types/groupie.png'),
 ('Thrillseeker', 'You''re an adrenaline junkie and love taking part in extreme sport that put you at physical risk.', '/assets/images/traveller_types/thrillseeker.png'),
 ('Gap Year', 'You''ve just graduated and are ready to see the world before your get into the working sector.', '/assets/images/traveller_types/gapYear.png'),
 ('Frequent Weekender', 'You''re a hard worker during the weekdays, but enjoy a quick weekend away to escape.', '/assets/images/traveller_types/frequentWeekender.png'),

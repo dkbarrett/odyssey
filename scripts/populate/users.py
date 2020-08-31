@@ -165,12 +165,12 @@ def generateUsers(userDict):
         achievement_tracker_file.write(achievement_tracker_sql)
 
     profile_file.seek(profile_file.tell() - 2, os.SEEK_SET)
-    profile_file.write('; SET FOREIGN_KEY_CHECKS = 1;');
-    profile_file.close();
+    profile_file.write('; SET FOREIGN_KEY_CHECKS = 1;')
+    profile_file.close()
 
     achievement_tracker_file.seek(achievement_tracker_file.tell() - 2, os.SEEK_SET)
-    achievement_tracker_file.write('; SET FOREIGN_KEY_CHECKS = 1;');
-    achievement_tracker_file.close();
+    achievement_tracker_file.write('; SET FOREIGN_KEY_CHECKS = 1;')
+    achievement_tracker_file.close()
 
     print("Done.")
 
@@ -191,7 +191,7 @@ def generateProfilePicture(userDict):
         urlList.append((i + ID_OFFSET, user['picture']['large']))
 
     # Will return a list of tuples (userId, filename)
-    fileList = downloadImages(urlList);
+    fileList = downloadImages(urlList)
 
     for (id, filename) in fileList:
         photo_file.write(f"({id}, '{DIR + PHOTO_DIR + filename}', '{DIR + PHOTO_DIR + THUMBNAIL_DIR + filename}', '2019-09-19', {id}, 'image/jpeg'), ")
@@ -204,15 +204,15 @@ def generateProfilePicture(userDict):
     personal_photo_file.seek(personal_photo_file.tell() - 2, os.SEEK_SET)
     personal_photo_file.write("; SET FOREIGN_KEY_CHECKS = 1;")
 
-    photo_file.close();
-    personal_photo_file.close();
+    photo_file.close()
+    personal_photo_file.close()
 
     print("Done.")
     pass
 
 def main():
     url = 'https://randomuser.me/api/'
-    emails = dict();
+    emails = dict()
 
     params = dict(
         results='5000',
